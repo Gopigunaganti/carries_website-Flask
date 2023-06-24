@@ -1,56 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>jovian Careers</title> 
+    <title> Careers</title> 
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <style>
-      h1{
-        font-size:40px;
-        font-family:roboto;
-        font-weight:normal;
-        color:rgb(150,120,120);
-        text-align: center;
-        
-        
-      }
-      h2{
-        font-size:30px;
-        font-family:roboto;
-        font-weight:normal;
-        color:rgb(152,120,150);
-        text-align:center;        
-      }
-      .bodytext{
-        color:rgb(108,108,120);
-        font-family:roboto;
+      #banner{
+        height:350px;
+        width:100%;
+        object-fit:cover;
       }
       
-      #banner{
-        width:100%;
-        height:400px;
-        object-fit:cover
-      }
-      #container{
-        max-width:720px;
-        margin:0 auto 0 auto;
-      }
+        
+      
     </style>
+    
   </head>
   
 <body>
-  <div id='container'>
-  <h1> Jovian Careers</h1>
-  <img id ='banner' src ="https://carrieswebsite-flask.gopigunaganti.repl.co/static/banner.jpg"
-    height="180">
-  <h2> About Jovian </h2>
-  <p class="bodytext">Economic Stability: Jobs play a crucial role in providing individuals and their families with financial stability. Employment allows people to earn income, meet their basic needs, support their dependents, and contribute to the overall economy.Personal Development: Jobs provide opportunities for personal growth and development. They allow individuals to gain new skills, acquire knowledge, and expand their expertise. With each job experience, individuals can enhance their professional capabilities and improve their future career prospects.
+  <div  class="container">
+  <h1 class="text-center mt-2 mb-4">
+    careers</h1>
+  <img class="img-fluid" 
+ id ="banner" src="https://carrieswebsite-flask.gopigunaganti.repl.co/static/banner.jpg">
+ 
+  <h2 class="text-center  mt-4 mb-2"> About {{company_name}} </h2>
+  <p  class="lead">Economic Stability: Jobs play a crucial role in providing individuals and their families with financial stability. Employment allows people to earn income, meet their basic needs, support their dependents, and contribute to the overall economy.Personal Development: Jobs provide opportunities for personal growth and development. They allow individuals to gain new skills, acquire knowledge, and expand their expertise. With each job experience, individuals can enhance their professional capabilities and improve their future career prospects.
     
-  </p>
-  <h2 >Open Positions</h2>
-  <P class="bodytext"> TODO show the jobs here</P>
-  <div style=text-align:center>
-  <button>contact us </button>
-  <p > Copyright 1999-2023 by Refsnes Data.All Rights Reserved.
-jovian carrers  is Powered by Jovian.</p>
+      </p>
+    <h2 class="text-center" >Open Positions</h2>
+    <div>
+      {% for job in jobs %}
+        {% include 'jobitems.html' %}
+
+            
+       {% endfor %}
+    </div>
+
+      
+
+      <div style=text-align:center>
+      <button class="btn btn-primary btn-lg mt-2 mb-4">contact us </button>
+  <p > Copyright.All Rights Reserved</p>
   <div>
   
   
