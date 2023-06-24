@@ -37,7 +37,7 @@ JOBS=[{
     {
       
   'id':6,
-  'position':'Sales',
+  'position':'Senior Devloper',
   'location':'kolkata,india',
   'salary':'7.5LPA'
   
@@ -46,13 +46,22 @@ JOBS=[{
       
     {
       
-  'id':4,
+  'id':7,
   'position':'python devloper',
   'location':'mumbai,india',
   'salary':'18LPA'
   
 
     },
+      {
+      
+  'id':8,
+  'position':'python devloper',
+  'location':'mumbai,india',
+  'salary':'18LPA'
+  
+
+    }
       
     
      ]
@@ -61,7 +70,7 @@ JOBS=[{
 
 @app.route("/")
 def hello_jovian():
-  return render_template("home.html",jobs=JOBS,company_name="Microsoft")
+  return render_template("home.html",jobs=JOBS,company_name="Google")
 @app.route("/jobs")
 def list_jobs():
   return jsonify(JOBS)
