@@ -19,16 +19,24 @@
   </head>
   
 <body>
+  {% include 'nav.html' %}
   <div  class="container">
-  <h1 class="text-center mt-2 mb-4">
-    careers</h1>
+  <h1 class="text-center mt-4 mb-2">
+   {{company_name}} careers</h1>
   <img class="img-fluid" 
  id ="banner" src="https://carrieswebsite-flask.gopigunaganti.repl.co/static/banner.jpg">
  
   <h2 class="text-center  mt-4 mb-2"> About {{company_name}} </h2>
-  <p  class="lead">Google LLC (/ˈɡuːɡəl/ (listen)) is an American multinational technology company focusing on artificial intelligence,[9] online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, and consumer electronics. It has been referred to as "the most powerful company in the world"[10] and as one of the world's most valuable brands due to its market dominance, data collection, and technological advantages in the field of artificial intelligence.[11][12][13] Its parent company Alphabet is often considered one of the Big Five American information technology companies, alongside Amazon, Apple, Meta, and Microsoft.
+    <div class="row" style="margin-bottom:16px;" >
+      <div class="col-md-6">
+  <p class="lead">Google LLC (/ˈɡuːɡəl/ (listen)) is an American multinational technology company focusing on artificial intelligence,[9] online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, and consumer electronics. It has been referred to as "the most powerful company in the world"[10] and as one of the world's most valuable brands due to its market dominance, data collection, and technological advantages in the field of artificial intelligence.[11][12][13] Its parent company Alphabet is often considered one of the Big Five American information technology companies, alongside Amazon, Apple, Meta, and Microsoft.
     
       </p>
+        </div>
+      <div class="d-none d-md-block col-md-6">
+      <img src="/static/people.jpg" style= 'height:300px; border-radius:4px;'>
+        </div>
+      </div>
     <h2 class="text-center" >Open Positions</h2>
     <div>
       {% for job in jobs %}
@@ -37,16 +45,15 @@
             
        {% endfor %}
     </div>
-
+    <div 
+      style=text-align:center>
+      <a class="btn btn-primary btn-lg mt-2 mb-4" href="mailto:gopigunaganti143@gmail.com?subject=Query%20about%20job%20openings&body=my%20name%3A%3Cyour%20name%20%3E%0D%0Amy%20query%20%3A%20%3Cyour%20Query%3E">contact us </a>
       
+   
+  {% include 'footers.html' %}
 
-      <div style=text-align:center>
-      <button class="btn btn-primary btn-lg mt-2 mb-4">contact us </button>
-  <p > Copyright.All Rights Reserved</p>
-  <div>
-  
-  
 </body>
-  </div>
+</div>
   
+ 
 </html>

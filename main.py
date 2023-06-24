@@ -70,7 +70,7 @@ JOBS=[{
 
 @app.route("/")
 def hello_jovian():
-  return render_template("home.html",jobs=JOBS,company_name="Google")
+  return render_template("home.html",jobs=JOBS,company_name="Jovian")
 @app.route("/jobs")
 def list_jobs():
   return jsonify(JOBS)
