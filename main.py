@@ -26,20 +26,42 @@ JOBS=[{
 },
     {
       
-  'id':4,
-  'position':'back-end devloper',
-  'location':'noida,india',
-  'salary':'10LPA'
+  'id':5,
+  'position':'QA Engineer',
+  'location':'Gurguan,india',
+  'salary':'9LPA'
   
 
-    }
+    },
+      
+    {
+      
+  'id':6,
+  'position':'Sales',
+  'location':'kolkata,india',
+  'salary':'7.5LPA'
+  
+
+    },
+      
+    {
+      
+  'id':4,
+  'position':'python devloper',
+  'location':'mumbai,india',
+  'salary':'18LPA'
+  
+
+    },
+      
+    
      ]
 
 
 
 @app.route("/")
 def hello_jovian():
-  return render_template("home.html",jobs=JOBS,company_name="flipkart")
+  return render_template("home.html",jobs=JOBS,company_name="Microsoft")
 @app.route("/jobs")
 def list_jobs():
   return jsonify(JOBS)
